@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using Untils_BLL;
 
 namespace Untils_UI
 {
@@ -19,14 +12,14 @@ namespace Untils_UI
         {
             InitializeComponent();
         }
-       
+
         private void FrmMain_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         //数据绑定
-      
+
 
         private void 添加ToolStripMenuItem_Click(object sender, EventArgs e)
         {

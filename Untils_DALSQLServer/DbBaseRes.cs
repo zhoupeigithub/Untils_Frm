@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
+﻿using System.Data.Common;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using Untils_DALProfile;
 
 namespace Untils_DALSQLServer
 {
-    public class DbBaseRes:IDbBase
+    public class DbBaseRes : IDbBase
     {
         DbCommand IDbBase.CreateCommand()
         {

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Untils_BLL;
 
@@ -55,13 +50,13 @@ namespace Untils_UI
         private void dgvUser_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //label1.Text = this.dgvUser["Z_Id", e.RowIndex].Value.ToString();
-            
+
             DataGridViewRow row = dgvUser.Rows[e.RowIndex];
             string ZId = row.Cells[0].Value.ToString();
             FrmUserDetails frmu = new FrmUserDetails(ZId);
             this.Hide();
             frmu.Show();
-            
+
         }
 
         private void dgvUser_CellMouseEnter(object sender, DataGridViewCellEventArgs e)

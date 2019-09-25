@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace NFine.Code
 {
@@ -98,7 +96,7 @@ namespace NFine.Code
         /// </summary>
         /// <param name="data">数据</param>
         /// <param name="digits">小数位数</param>
-        public static decimal ToDecimal(this  object data, int digits)
+        public static decimal ToDecimal(this object data, int digits)
         {
             return Math.Round(ToDecimal(data), digits);
         }
@@ -107,7 +105,7 @@ namespace NFine.Code
         /// 转换为可空高精度浮点数
         /// </summary>
         /// <param name="data">数据</param>
-        public static decimal? ToDecimalOrNull(this  object data)
+        public static decimal? ToDecimalOrNull(this object data)
         {
             if (data == null)
                 return null;

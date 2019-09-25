@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using Untils_DALFactory;
 using Untils_DALProfile;
 using Untils_Model;
@@ -96,7 +92,7 @@ namespace Untils_DALSQLServer
                                         Z_Password=@Password ,
                                         Z_UserType=@UserType 
                                         where Z_Id=@UserID ";
-            SqlParameter[] parameters = {  
+            SqlParameter[] parameters = {
                                            new SqlParameter("@UserName",bzu.Z_UserName),
                                            new SqlParameter("@NickName",bzu.Z_NickName),
                                            new SqlParameter("@Password",bzu.Z_Password),

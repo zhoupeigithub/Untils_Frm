@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using Untils_DALFactory;
 using Untils_Model;
 
@@ -29,7 +25,7 @@ namespace Untils_BLL
         /// 获取所有用户类型
         /// </summary>
         /// <returns></returns>
-        public DataTable GetAllUserType() 
+        public DataTable GetAllUserType()
         {
             return iu.GetAllUserType();
         }
@@ -64,6 +60,6 @@ namespace Untils_BLL
         {
             return iu.UpdateByZId(bzu);
         }
-       
+
     }
 }

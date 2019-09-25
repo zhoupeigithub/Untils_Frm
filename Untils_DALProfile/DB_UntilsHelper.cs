@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using Untils_Config;
 
@@ -108,7 +105,7 @@ namespace Untils_DALProfile
                 conn.Open();
                 DbCommand cmd = Provider.CreateCommand();
                 PrepareCommand(cmd, conn, null, CommandType.Text, "", commandParameters);
-                string Sql = GetPageSql(conn, cmd, SqlAllFields, SqlTablesAndWhere, IndexField, OrderFields, PageIndex, PageSize, out  RecordCount, out  PageCount);
+                string Sql = GetPageSql(conn, cmd, SqlAllFields, SqlTablesAndWhere, IndexField, OrderFields, PageIndex, PageSize, out RecordCount, out PageCount);
                 if (GroupClause != null && GroupClause.Trim() != "")
                 {
                     int n = Sql.ToLower().LastIndexOf(" order by ");
@@ -226,7 +223,7 @@ namespace Untils_DALProfile
         /// <returns>返回查询结果</returns>
         public static DataTable ExecutePage(string SqlAllFields, string SqlTablesAndWhere, string IndexField, string OrderFields, int PageIndex, int PageSize, out int RecordCount, out int PageCount, params DbParameter[] commandParameters)
         {
-            return ExecutePage(DBConfig.ResConnStr, SqlAllFields, SqlTablesAndWhere, IndexField, OrderFields, PageIndex, PageSize, out  RecordCount, out  PageCount, commandParameters);
+            return ExecutePage(DBConfig.ResConnStr, SqlAllFields, SqlTablesAndWhere, IndexField, OrderFields, PageIndex, PageSize, out RecordCount, out PageCount, commandParameters);
         }
 
         /// <summary>
@@ -271,7 +268,7 @@ namespace Untils_DALProfile
         {
             DbCommand cmd = Provider.CreateCommand();
             PrepareCommand(cmd, connection, null, CommandType.Text, "", commandParameters);
-            string Sql = GetPageSql(connection, cmd, SqlAllFields, SqlTablesAndWhere, IndexField, OrderFields, PageIndex, PageSize, out  RecordCount, out  PageCount);
+            string Sql = GetPageSql(connection, cmd, SqlAllFields, SqlTablesAndWhere, IndexField, OrderFields, PageIndex, PageSize, out RecordCount, out PageCount);
             cmd.CommandText = Sql;
             DbDataAdapter ap = Provider.CreateDataAdapter();
             ap.SelectCommand = cmd;
