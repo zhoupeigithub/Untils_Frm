@@ -7,5 +7,6 @@
         public string Z_NickName { get; set; }
         public string Z_Password { get; set; }
         public string Z_UserType { get; set; }
+        public char Sex { get; set; }
     }
 }
